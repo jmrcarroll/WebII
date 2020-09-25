@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<!-- 
+Name: John Carroll
+SID:1484479
+Date: 07/05/19
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 7</title>  
+      	<style>
+ 			 table {
+    			border-collapse: collapse;
+			}
+			table, th, td {
+   				 border: 1px solid black;
+          	}
+		</style>
+    </head>
+    <body style="background-color:#5a9b66; text-color:#ff00ff;">
+        <div id="wrapper">
+            <div id="header"><img  src="../img/banner.png" alt="BANNER" width="100%" height="200" class="center"   ></div>
+            <nav><b>
+                <table style="width:100%">
+                <tr>
+                    <th><a href="../index.php" class="center">Home</a></th>
+                    <th><a href="../exer1.php" class="center">Exercise 1</a></th>
+                    <th><a href="../exer2.php" class="center">Exercise 2</a></th> 
+                    <th><a href="../exer3.php" class="center">Exercise 3</a></th>
+                    <th><a href="../exer4.html" class="center">Exercise 4</a></th>
+                    <th><a href="../exer5.php" class="center">Exercise 5</a></th>
+                    <th><a href="exer6.html" class="center">Exercise 6</a></th>
+                    <th><a href="exer7.html" class="center">Exercise 7</a></th>
+                    <th><a href="exer8.html" class="center">Exercise 8</a></th>
+                    <th><a href="exer9.html" class="center">Exercise 9</a></th>
+                </tr> </table>
+            </b></nav>
+        </div>
+        <script>
+            
+            function showit(what,where){
+                var node = document.getElementById(where);
+                node.innerHTML = what;
+            }
+            
+            function Timetables(){
+                var str = " ";
+                for (var i = 1; i<=12; i++){
+                    for (var j=1; j<=12; j++){
+                        str = str + i + "*" + j + "=" +i*j + "|";
+                    } 
+                    str = str + "<br>";
+                }
+                showit(str,"output1");
+            }
+            
+            function TabledTimetables(){
+                var str = "<table>";
+                for (var i = 1; i<=12; i++){
+                    str = str + "<tr>"
+                    for (var j=1; j<=12; j++){
+                        str = str + "<td>" + i + "*" + j + "=" +i*j + "</td>";
+                    } 
+                    str = str + "</tr>";
+                }
+                str = str + "</table>";
+                showit(str,"output1");
+            }
+            
+            function AlertTimestables(){
+                var str = "";
+                for (var i = 1; i<=12; i++){
+                    for (var j=1; j<=12; j++){
+                        str = str + i + "*" + j + "=" +i*j + "\r\n";
+                    } 
+                  alert(str);
+                  str = "";
+                }
+            }
+            
+        </script>
+        <noscript>Please enabled Javascript</noscript>
+        <button onclick="Timetables()">Timetables</button><br>
+        <button onclick="TabledTimetables()">Timestables in a table</button><br>
+        <button onclick="AlertTimestables()">Timestables in an alert</button>
+        <br>
+        <div id="output1"></div>
+    </body>
+</html>

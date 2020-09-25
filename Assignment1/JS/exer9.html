@@ -1,0 +1,69 @@
+ <!DOCTYPE HTML>
+<!-- 
+Name: John Carroll
+SID:1484479
+Date: 07/05/19
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 9</title>
+        <style>
+  table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+    </head>
+    <body style="background-color:#5a9b66; text-color:#ff00ff;">
+         <div id="wrapper">
+            <div id="header"><img  src="../img/banner.png" alt="BANNER" width="100%" height="200" class="center"></div>
+            <nav><b>
+                <table style="width:100%">
+                <tr>
+                    <th><a href="../index.php" class="center">Home</a></th>
+                    <th><a href="../exer1.php" class="center">Exercise 1</a></th>
+                    <th><a href="../exer2.php" class="center">Exercise 2</a></th> 
+                    <th><a href="../exer3.php" class="center">Exercise 3</a></th>
+                    <th><a href="../exer4.html" class="center">Exercise 4</a></th>
+                    <th><a href="../exer5.php" class="center">Exercise 5</a></th>
+                    <th><a href="exer6.html" class="center">Exercise 6</a></th>
+                    <th><a href="exer7.html" class="center">Exercise 7</a></th>
+                    <th><a href="exer8.html" class="center">Exercise 8</a></th>
+                    <th><a href="exer9.html" class="center">Exercise 9</a></th>
+                </tr> </table>
+            </b></nav>
+    </div>
+	<button onclick="Semaphore()">Start lesson </button>
+	<div id="phrase"></div>
+    <div id="result"></div>
+        <script>
+    function Semaphore(){
+	var name = window.prompt("Please input the phrase you would like to use ","Hello");
+    var letter = "";
+    var imgtag = "";
+    var result = "";
+    
+    for (i=0;i<name.length;i++){
+    	letter = name.charAt(i);
+        if (letter == " "){
+            imgtag = " <img src='img/semgif/interval.gif'> ";
+            console.log(imgtag); //debug 
+        } else {
+            imgtag = " <img src='img/semgif/"+letter.toLowerCase()+".gif'> ";
+            console.log(imgtag); //debug
+        }
+        result = result+imgtag;
+    }
+     document.getElementById("result").innerHTML = result;
+	 document.getElementById("phrase").innerHTML = name.toUpperCase();
+	 }
+        </script>
+        <noscript>
+            Please enabled Javascript
+        </noscript>
+ 
+    </body>
+</html>
